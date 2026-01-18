@@ -1,97 +1,135 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Event Explorer
 
-# Getting Started
+React Native app for browsing and managing events. Built with TypeScript, Redux Toolkit Query, and React Navigation.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## Features
 
-## Step 1: Start Metro
+- Browse upcoming events with search
+- View event details
+- Mark events as interested
+- Light/dark theme toggle
+- Offline caching (15 min)
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## Tech Stack
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- React Native 0.83
+- TypeScript
+- Redux Toolkit Query (caching & state)
+- React Navigation
+- AsyncStorage
 
-```sh
-# Using npm
-npm start
+## Setup
 
-# OR using Yarn
-yarn start
+```bash
+# Install dependencies
+yarn install
+
+# iOS setup
+cd ios && pod install && cd ..
+
+# Run
+yarn ios        # iOS
+yarn android    # Android
 ```
 
-## Step 2: Build and run your app
+## Project Structure
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+```
+src/
+├── components/      # Reusable UI components
+├── screens/         # Screen components
+├── navigation/      # Navigation config
+├── store/          
+│   ├── api/         # RTK Query API
+│   ├── slices/      # Redux slices
+│   ├── hooks.ts     # Typed hooks
+│   └── selectors.ts # Memoized selectors
+├── context/         # Theme context
+├── storage/         # AsyncStorage utils
+├── services/        # Business logic
+├── data/            # Mock data
+├── theme/           # Theme config
+├── types/           # TypeScript types
+└── utils/           # Helper functions
 ```
 
-### iOS
+## State Management
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+### RTK Query (Server State)
+- Auto caching (15 min)
+- Auto refetching on focus/reconnect
+- Request deduplication
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+### Redux Slices (Client State)
+- Interested events (persisted to AsyncStorage)
+- Search query
 
-```sh
-bundle install
+### Context (UI State)
+- Theme (light/dark)
+
+## Key Files
+
+- `App.tsx` - Root component with providers
+- `src/store/api/eventsApi.ts` - RTK Query API
+- `src/store/slices/interestedSlice.ts` - Interested events state
+- `src/screens/*_RTK.tsx` - Screen components
+- `src/navigation/MainNavigator.tsx` - Navigation setup
+
+## Technical Decisions
+
+**RTK Query for Events:**
+- Automatic caching eliminates manual cache management
+- Smart refetching improves UX
+- Built-in loading states reduce boilerplate
+- DevTools support for debugging
+
+**Redux for Client State:**
+- Interested events need persistence
+- Search query is global
+- Predictable state updates
+
+**Context for Theme:**
+- Simple local state
+- No need for Redux overhead
+
+**AsyncStorage for Persistence:**
+- Interested events persist across sessions
+- Theme preference saved
+- Event cache with timestamp
+
+## Architecture
+
+```
+UI Components
+    ↓
+Redux Store (RTK Query + Slices)
+    ↓
+AsyncStorage (Persistence)
 ```
 
-Then, and every time you update your native dependencies, run:
+Unidirectional data flow with clear separation between server state (RTK Query), client state (Redux), and UI state (Context).
 
-```sh
-bundle exec pod install
-```
+## Performance
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+- Memoized selectors prevent unnecessary calculations
+- Request deduplication reduces network calls
+- Selective re-renders (not full tree)
+- FlatList for efficient list rendering
+- Image optimization with resizeMode
 
-```sh
-# Using npm
-npm run ios
+## Time Spent
 
-# OR using Yarn
-yarn ios
-```
+Approximately 8-10 hours including:
+- Setup & architecture
+- Redux/RTK Query implementation
+- UI components & screens
+- Testing
+- Documentation
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## Future Improvements
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- Real API integration
+- More comprehensive tests
+- Animations
+- Accessibility improvements
+- i18n support

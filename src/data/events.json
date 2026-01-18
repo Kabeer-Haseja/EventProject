@@ -1,0 +1,135 @@
+[
+  {
+    "id": "evt-001",
+    "name": "React Native Conference 2026",
+    "date": "2026-03-15T09:00:00Z",
+    "location": "San Francisco, CA",
+    "description": "Join us for the biggest React Native conference of the year! Learn about the latest developments in React Native, meet industry leaders, and network with fellow developers from around the world. This year's conference features workshops, keynotes, and hands-on sessions covering performance optimization, best practices, and cutting-edge features.",
+    "organizer": "React Native Foundation",
+    "thumbnailUrl": "https://picsum.photos/seed/rn2026/400/300",
+    "imageUrl": "https://picsum.photos/seed/rn2026/800/600",
+    "category": "Technology"
+  },
+  {
+    "id": "evt-002",
+    "name": "Tech Innovation Summit",
+    "date": "2026-04-20T10:00:00Z",
+    "location": "New York, NY",
+    "description": "Explore the future of technology at this groundbreaking summit. Featuring AI innovations, blockchain technology, and the next generation of mobile applications. Network with CTOs, developers, and investors shaping the future of tech.",
+    "organizer": "Innovation Labs",
+    "thumbnailUrl": "https://picsum.photos/seed/tech2026/400/300",
+    "imageUrl": "https://picsum.photos/seed/tech2026/800/600",
+    "category": "Technology"
+  },
+  {
+    "id": "evt-003",
+    "name": "Mobile App Dev Meetup",
+    "date": "2026-02-10T18:30:00Z",
+    "location": "Austin, TX",
+    "description": "Monthly meetup for mobile app developers. This month we're focusing on cross-platform development strategies, state management patterns, and performance optimization techniques. Pizza and drinks provided!",
+    "organizer": "Austin Dev Community",
+    "thumbnailUrl": "https://picsum.photos/seed/mobile2026/400/300",
+    "imageUrl": "https://picsum.photos/seed/mobile2026/800/600",
+    "category": "Meetup"
+  },
+  {
+    "id": "evt-004",
+    "name": "Design Systems Workshop",
+    "date": "2026-05-05T13:00:00Z",
+    "location": "Seattle, WA",
+    "description": "Learn how to build scalable and maintainable design systems for mobile applications. This hands-on workshop covers component libraries, theming, accessibility, and design tokens. Perfect for developers and designers working on mobile apps.",
+    "organizer": "UX Collective",
+    "thumbnailUrl": "https://picsum.photos/seed/design2026/400/300",
+    "imageUrl": "https://picsum.photos/seed/design2026/800/600",
+    "category": "Workshop"
+  },
+  {
+    "id": "evt-005",
+    "name": "JavaScript & Coffee",
+    "date": "2026-02-28T08:00:00Z",
+    "location": "Portland, OR",
+    "description": "Start your day with coffee and code! Join fellow JavaScript enthusiasts for casual networking and knowledge sharing. Topics range from vanilla JS to modern frameworks. All skill levels welcome.",
+    "organizer": "Portland JS Group",
+    "thumbnailUrl": "https://picsum.photos/seed/js2026/400/300",
+    "imageUrl": "https://picsum.photos/seed/js2026/800/600",
+    "category": "Meetup"
+  },
+  {
+    "id": "evt-006",
+    "name": "Mobile Security Conference",
+    "date": "2026-06-12T09:00:00Z",
+    "location": "Boston, MA",
+    "description": "Comprehensive conference on mobile application security. Learn about secure coding practices, encryption, authentication, and protecting user data. Essential for developers building production mobile apps.",
+    "organizer": "CyberSec Institute",
+    "thumbnailUrl": "https://picsum.photos/seed/security2026/400/300",
+    "imageUrl": "https://picsum.photos/seed/security2026/800/600",
+    "category": "Technology"
+  },
+  {
+    "id": "evt-007",
+    "name": "TypeScript Deep Dive",
+    "date": "2026-03-25T14:00:00Z",
+    "location": "Chicago, IL",
+    "description": "Advanced TypeScript workshop covering generics, utility types, decorators, and advanced patterns. Learn how to leverage TypeScript's type system to build more reliable mobile applications.",
+    "organizer": "Type Masters",
+    "thumbnailUrl": "https://picsum.photos/seed/typescript2026/400/300",
+    "imageUrl": "https://picsum.photos/seed/typescript2026/800/600",
+    "category": "Workshop"
+  },
+  {
+    "id": "evt-008",
+    "name": "Startup Showcase 2026",
+    "date": "2026-07-18T17:00:00Z",
+    "location": "Los Angeles, CA",
+    "description": "Watch innovative startups pitch their mobile-first products. Network with founders, investors, and early adopters. Great opportunity for developers looking to join exciting early-stage companies.",
+    "organizer": "Venture Connect",
+    "thumbnailUrl": "https://picsum.photos/seed/startup2026/400/300",
+    "imageUrl": "https://picsum.photos/seed/startup2026/800/600",
+    "category": "Business"
+  },
+  {
+    "id": "evt-009",
+    "name": "Open Source Contributors Day",
+    "date": "2026-04-08T10:00:00Z",
+    "location": "Denver, CO",
+    "description": "Contribute to popular open source mobile projects! Maintainers will be on hand to help new contributors get started. Whether you're fixing bugs, improving docs, or adding features, everyone is welcome.",
+    "organizer": "Open Source Alliance",
+    "thumbnailUrl": "https://picsum.photos/seed/opensource2026/400/300",
+    "imageUrl": "https://picsum.photos/seed/opensource2026/800/600",
+    "category": "Community"
+  },
+  {
+    "id": "evt-010",
+    "name": "Performance Optimization Masterclass",
+    "date": "2026-05-22T11:00:00Z",
+    "location": "San Jose, CA",
+    "description": "Master the art of mobile app performance optimization. Topics include bundle size reduction, memory management, rendering performance, and profiling tools. Bring your slow app and leave with a fast one!",
+    "organizer": "Performance Guild",
+    "thumbnailUrl": "https://picsum.photos/seed/performance2026/400/300",
+    "imageUrl": "https://picsum.photos/seed/performance2026/800/600",
+    "category": "Workshop"
+  },
+  {
+    "id": "evt-011",
+    "name": "Women in Tech Summit",
+    "date": "2026-08-14T09:00:00Z",
+    "location": "Miami, FL",
+    "description": "Celebrating and empowering women in technology. Featuring inspiring speakers, mentorship sessions, and networking opportunities. Join us in building a more inclusive tech community.",
+    "organizer": "WiT Global",
+    "thumbnailUrl": "https://picsum.photos/seed/wit2026/400/300",
+    "imageUrl": "https://picsum.photos/seed/wit2026/800/600",
+    "category": "Community"
+  },
+  {
+    "id": "evt-012",
+    "name": "GraphQL for Mobile Apps",
+    "date": "2026-03-30T15:00:00Z",
+    "location": "Phoenix, AZ",
+    "description": "Learn how to use GraphQL in your mobile applications. Topics include Apollo Client, caching strategies, offline support, and optimistic UI updates. Transform how your apps communicate with backends.",
+    "organizer": "API Architects",
+    "thumbnailUrl": "https://picsum.photos/seed/graphql2026/400/300",
+    "imageUrl": "https://picsum.photos/seed/graphql2026/800/600",
+    "category": "Workshop"
+  }
+]
+
